@@ -45,7 +45,7 @@ def move():
         targets.append(target)
 
     for target in targets:
-        target.x -= 10
+        target.x -= 0.35
 
     if inside(ball):
         speed.y -= 0.35
@@ -62,7 +62,8 @@ def move():
 
     for target in targets:
         if not inside(target):
-            return
+            target.x = 200
+            target.y = randrange(-150,150)
 
     ontimer(move, 50)
 
