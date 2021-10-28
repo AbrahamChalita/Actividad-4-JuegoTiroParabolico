@@ -1,10 +1,10 @@
 from random import randrange
 from turtle import *
-
 from freegames import vector
 
 ball = vector(-200, -200)
 speed = vector(0, 0)
+speedFactor = 500
 targets = []
 
 
@@ -13,8 +13,8 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 200) / 25
-        speed.y = (y + 200) / 25
+        speed.x = (x + speedFactor) / 25
+        speed.y = (y + speedFactor) / 25
 
 
 def inside(xy):
