@@ -4,7 +4,7 @@ from freegames import vector
 
 ball = vector(-200, -200)
 speed = vector(0, 0)
-speedFactor = 500
+speedFactor = 800
 targets = []
 
 
@@ -45,7 +45,7 @@ def move():
         targets.append(target)
 
     for target in targets:
-        target.x -= 0.5
+        target.x -= 10
 
     if inside(ball):
         speed.y -= 0.35
