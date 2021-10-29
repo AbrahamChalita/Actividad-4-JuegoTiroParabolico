@@ -59,7 +59,8 @@ def move():
             targets.append(target)
 
     draw()
-
+    
+    # Para hacer que el juego no termine, se reubica a las pelotas que salgan del rango de pantalla en la posicion de inicio en x y en una nueva posicion en y
     for target in targets:
         if not inside(target):
             target.x = 200
