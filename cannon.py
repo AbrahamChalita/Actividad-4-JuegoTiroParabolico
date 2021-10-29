@@ -4,6 +4,7 @@ from freegames import vector
 
 ball = vector(-200, -200)
 speed = vector(0, 0)
+# se crea factor de speed que permitirá aumentar la velocidad
 speedFactor = 800
 targets = []
 
@@ -13,6 +14,7 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
+        # se agrega variable speed factor para aumentar proporción de velocidad
         speed.x = (x + speedFactor) / 25
         speed.y = (y + speedFactor) / 25
 
