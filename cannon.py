@@ -45,9 +45,10 @@ def move():
         y = randrange(-150, 150)
         target = vector(200, y)
         targets.append(target)
-
+    
+    # se modifica la velocidad de los targets en el eje x
     for target in targets:
-        target.x -= 0.35
+        target.x -= 10
 
     if inside(ball):
         speed.y -= 0.35
